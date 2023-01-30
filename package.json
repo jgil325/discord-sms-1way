@@ -1,0 +1,21 @@
+{
+  "name": "discord-sms",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord": "^0.8.2",
+    "discord.js": "^14.1.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "twilio": "^3.84.1",
+    "ws": "^8.12.0"
+  }
+}
