@@ -1,3 +1,4 @@
+// This has a two way connection and was made for testing purposes
 import dotenv from "dotenv";
 import twilio from "twilio";
 import { Client, GatewayIntentBits } from "discord.js";
@@ -22,7 +23,7 @@ const client = new Client({
   ],
 });
 
-const twilioP = twilio(
+const twilioClient = twilio(
   process.env.TWILIO_ACCOUNT_SID,
   process.env.TWILIO_AUTH_TOKEN
 );
@@ -31,10 +32,11 @@ const myUserId = "123123123";
 // 334433747145326604
 
 function sendSMS(sms) {
-  twilioP.messages.create({
+  console.log("sms time");
+  twilioClient.messages.create({
     body: sms,
-    to: twilioP.process.env.PERSONAL_NUMBER,
-    from: twilioP.process.env.TWILIO_NUMBER,
+    to: "+16782064017",
+    from: "+18444583649",
   });
 }
 
